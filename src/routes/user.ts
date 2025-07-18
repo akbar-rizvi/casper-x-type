@@ -23,4 +23,6 @@ router.post('/character-approval',controllers.User.characterApproval);
 
 
 router.get('/get-template',controllers.User.getTemplates);
+router.get('/image-quality-info',controllers.User.imageQualityInfo)
+
 export default router

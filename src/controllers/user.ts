@@ -3,7 +3,7 @@ import {v4 as uuid} from "uuid"
 import { isIndianLocation } from "../helper/helper";
 import { generateTweetOnly } from "../helper/generateTweetOnly";
 import {  ContentGenerator } from "../helper/generatetTweetWithExistingCharacter";
-import { ART_STYLES, ENHANCED_MEME_TEMPLATES } from "../utils/data";
+import { ART_STYLES, ENHANCED_MEME_TEMPLATES, IMAGE_QUALITY_OPTIONS } from "../utils/data";
 import {  generateCharacterImage } from "../helper/generateCharacter";
 
 
@@ -339,6 +339,12 @@ const tweet_result = await contentGenerator.generate_tweet_complete(
   //-------------------------get templates-----------------------------------//
   static getTemplates = async (req: authenticateUser, res: Response): Promise<any> => {
     return res.send(ENHANCED_MEME_TEMPLATES)
+    
+  }
+
+  //-----------------------get Image Quality Info----------------------------//
+  static imageQualityInfo = async (req: authenticateUser, res: Response): Promise<any> => {
+    return res.send(IMAGE_QUALITY_OPTIONS)
     
   }
 
